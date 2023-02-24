@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <!-- (Part 2: CSS, Question 0) Font import here. If you don't know what this is yet, don't worry, we cover this in the Part 2 of the homework.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
     <title>Bryan Flores</title>
 </head>
 <body>
     <div id=container>
         <!-- Question 0. Add an image here (a picture of you!) Make sure it's a square. -->
+        <h1>
+            <img src="assets\profile_image.png">
+        </h1>
         <h1>Bryan Flores</h1>
         <!-- Question 1. Add headings to each of these sections! Make this heading smaller than your name.-->
         <section id="education">
             <!-- Question 2. Fill this in with details about your degree, major(s), and coursework. Use at least 1 header tag (h3, b, or em). -->
-            <h3>
+            <h2>
                 Education
             </h3>
             <h3>
@@ -25,37 +31,66 @@
         </section>
         <section id="experience">
             <!-- Question 3a. Create 2 to 3 divs with the same class (experience-list-item), and fill them in with your work experiences. -->
-            <div class="experience-list-item">
-                <h3>Academic Intern CS10</h3>
-                <ul>
-                    <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                </ul>
-            </div>
-            <div class="experience-list-item">
-                <h3>Academic Intern DATA C88</h3>
-                <ul>
-                    <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                </ul>
-            </div>
-            <div class="experience-list-item">
-                <h3>Company/Club Name Here</h3>
-                <ul>
-                    <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
-                </ul>
+            <h2>Experience</h2>
+            <div class="experience-wrapper">
+                <div class="experience-list-item">
+                    <h3>Academic Intern DATA C88</h3>
+                    <ul>
+                        <li>
+                            Teach 15+ students fundamental CS concepts in Python, functional programming, data abstraction, object-oriented programming, and program complexity.
+                        <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
+                        </li>
+                    </ul>
+                </div>
+                <div class="experience-list-item">
+                    <h3>Academic Intern CS10</h3>
+                    <ul>
+                        <li>
+                            Teach 30+ students CS concepts in Snap! and Python, which include recursion, abstraction, OOP, and efficiency analysis.
+                        </li>
+                            <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
+                    </ul>
+                </div>
+                <div class="experience-list-item">
+                    <h3>Visitor Service Assistant</h3>
+                    <p>
+                        <ul>
+                            <li>
+                                Interacted with 100+ people a day providing them with the necessary information or acting as a liaison between the visitor and the various departments within the museum such as that of the curators, store, film archive, etc.
+                            </li>
+                                <!-- Question 3b. Fill this in with some bulletpoints on things you did. -->
+                        </ul>
+                    </p>
+
+                </div>
             </div>
             <!-- Question 3c. Create a div that contains all the experience-list-item divs named "experience-wrapper"! You'll need this later. -->
         </section>
         <section id="projects">
+            <h2>Projects</h2>
             <!-- Question 4a. Create a few project-list-items divs. Fill these in with your favorite projects! -->
-            <div class="project-list-item">
-                <h3>Project Name Here</h3>
-                <p>Description Here</p>
+            <div class="project-wrapper">
+                <div class="project-list-item">
+                    <h3>Representative Finder</h3>
+                    <p>Created a full-stack web app using Google’s Civic API to find representatives of any given location along with news articles of given topic through Google’s News API.</p>
+                </div>
+                <div class="project-list-item">
+                    <h3>Version Control System</h3>
+                    <p>Designed and created a version control system from scratch mimicking some of the basic features of the popular system Git by applying the Depth First Search (DFS) algorithm within an undirected acyclic graph data structure. </p>
+                </div>
+                <div class="project-list-item">
+                    <h3>Mini Numpy</h3>
+                    <p>Built a simple version of the Numpy library in C with addition, multiplication, and power functions </p>
+                </div>
             </div>
             <!-- Question 4b. Create a div that contains all the projects-list-item divs named "project-wrapper". You'll need this later! -->
         </section>
         <section id="contact">
+            <h2>
+                Contact
+            </h2>
             <!-- Question 5. Add a link to your favorite social media account to the text "here". -->
-            <p>You can contact me here!</p>
+            <p>You can contact me via <a href="https://www.linkedin.com/in/bryan-flores-561a1a241/">Linkedin</a></p>
         </section>
     </div>
 </body>

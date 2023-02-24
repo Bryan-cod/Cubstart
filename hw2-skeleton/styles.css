@@ -26,10 +26,12 @@ h1 {
 /* Question 1. Add a hover effect for your h1 tag and img tag! You can change the background-color, color, opacity, or anything you want.*/
 h1:hover {
     /* YOUR CODE HERE */
+    color: burlywood;
 }
 
 img:hover {
     /* YOUR CODE HERE */
+    opacity: 0.75;
 }
 
 
@@ -38,6 +40,12 @@ img:hover {
 section {
     text-align: center;
     /* YOUR CODE HERE */
+    background-color: lightgrey;
+    width: auto;
+    border: 5px solid black;
+    padding: 50px;
+    margin: 20px;
+
 }
 
 
@@ -45,8 +53,24 @@ section {
 /* Question 3. Add different background colors for all the different sections, by selecting them via ids. */
 
 /* YOUR CODE HERE */
+#education {
+    background-color: rgb(246, 208, 159);
+}
 
+#experience {
+    background-color: rgb(254, 203, 254);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+#projects {
+    background-color: rgb(197, 254, 197);
+}
+
+#contact {
+    background-color: rgb(227, 195, 134);
+}
 
 /* Experience Section */
 
@@ -54,10 +78,11 @@ section {
  Hint: If you're stuck with finding values that work, check the homework instructions document for some help!*/
 
 .experience-wrapper {
-    gap: /* YOUR CODE HERE */
-    display: /* YOUR CODE HERE */
-    flex-wrap: /* YOUR CODE HERE */
-    justify-content: /* YOUR CODE HERE */
+    gap: 20px;/* YOUR CODE HERE */
+    display: flex;/* YOUR CODE HERE */
+    flex-wrap: wrap;/* YOUR CODE HERE */
+    justify-content: center;/* YOUR CODE HERE */
+    
 }
 
 .experience-list-item {
@@ -82,6 +107,8 @@ Experiment with border, border-radius, background-color, or whatever you want!*/
 
 .experience-list-item:hover {
     /* YOUR CODE HERE */
+    background-color: rgb(246, 208, 159);
+    border: 4px solid white;
 }
 
 
@@ -91,6 +118,39 @@ Experiment with border, border-radius, background-color, or whatever you want!*/
 
 /* Question 5. Use CSS Flexbox or Grid and hover effects for the Projects Section, 
 but use different hover effects from the Experiences section! */
+.project-wrapper {
+    gap: 20px;/* YOUR CODE HERE */
+    display: flex;/* YOUR CODE HERE */
+    flex-wrap: wrap;/* YOUR CODE HERE */
+    justify-content: center;/* YOUR CODE HERE */
+    
+}
+
+.project-list-item {
+    /* Tip: Feel free to change anything here (e.g. border, background-color, etc.). 
+    Changing the padding and width might throws thiings off, but experiment with it and see what looks good. */
+    border: 4px solid #1d3557;
+    text-align: center;
+    width: 250px;
+    padding: 10px 20px;
+    background-color: rgb(245, 215, 245);
+    border-radius: 15px;
+
+    /* Tip: Add the transition attribute to make effects look smoother! 
+    This means the hover effect will slowly kick in for 0.2s. */
+    transition: ease-in-out 0.2s;
+}
+
+
+
+/* Question 4b. Let's take a break! Add a hover effect to each experience-list-item div. 
+Experiment with border, border-radius, background-color, or whatever you want!*/
+
+.project-list-item:hover {
+    /* YOUR CODE HERE */
+    background-color: rgb(254, 203, 254);
+    border-radius: 30%;
+}
 
 
 
@@ -100,10 +160,13 @@ but use different hover effects from the Experiences section! */
 /* Question 6. Make your link pretty! */
 a {
     /* YOUR CODE HERE */
+    color:blue;
+
 }
 
 a:hover {
     /* YOUR CODE HERE */
+    font-weight: bold;
 }
 
 
@@ -113,4 +176,11 @@ project-list-item and experience-list-item divs have a width of 100% for smaller
 /* Small devices (portrait tablets and large phones, 600px screen and up) */
 @media only screen and (max-width: 600px) {
     /* YOUR CODE HERE */
+    .project-list-item {
+        width: 100%;
+    }
+    .experience-list-item {
+        width: 100%;
+    }
+
 }
