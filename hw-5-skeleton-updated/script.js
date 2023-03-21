@@ -38,13 +38,13 @@ async function getLatLon(city) {
   // Ddoski: Let's create the url we call the API on here. 
   // Be sure to use a url provided above, and the city name provided by the user.
   // (CLUE #2: See more info in the homework spec.)
-  let formattedUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid="+apiKey/* YOUR CODE HERE */
-  let data = await apiCall(formattedUrl)
+  let formattedUrl = "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid="+apiKey;/* YOUR CODE HERE */
+  let data = await apiCall(formattedUrl);
   // Ddoski: We're returning a Javascript object here! 
   // Which part of the data variable do we extract for the lat and lon?
   return {
-    "lat": data["lat"],
-    "lon": data["lon"] 
+    "lat": data["0"]["lat"],
+    "lon": data["0"]["lon"] 
   } /* YOUR CODE HERE */
 }
 
@@ -53,12 +53,12 @@ async function getLatLon(city) {
 // (CLUE #3: See more info in the homework spec.)
 async function getWeather(lat, lon) {
   /* YOUR CODE HERE */
-  let formattedUrl = "http://api.openweathermap.org/data/2.5/weather?q=lat="+lat+"&lon="+lon+"&appid="+apiKey/* YOUR CODE HERE */
+  let formattedUrl = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+apiKey/* YOUR CODE HERE */
   let data = await apiCall(formattedUrl)
-
+  console.log(data)
   return {
-    "main": data["main"],
-    "description": data["description"]
+    "main": data["weather"]["0"]["main"],
+    "description": data["weather"]["0"]["description"]
   } /* YOUR CODE HERE */
 }
 
@@ -72,12 +72,12 @@ async function setWeatherDescription(city) {
   // (CLUE #4: See more info in the homework spec.)
   const lat = coordData["lat"]/* YOUR CODE HERE */
   const lon = coordData["lon"]/* YOUR CODE HERE */
-
   let weatherData = await getWeather(lat, lon)
-  
   // Ddoski: Same thing here, but we're trying to set mainWeather and weatherDescription's innerHTML 
   // to the relevant values in weatherData.
   /* YOUR CODE HERE */
-  
+  mainWeather.innerHTML = weatherData["main"]
+  weatherDescription.innerHTML = weatherData["description"];
 
+  
 }
